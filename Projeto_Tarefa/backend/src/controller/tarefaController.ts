@@ -18,6 +18,7 @@ export const getTarefa = async(request: Request, response: Response) => {
     //buscando somente uma tarefa
     const {cod} = request.params
     const tarefa = await getRepository(Tarefa).findOne(cod)
+    return response.json(tarefa)
     
 };
 
